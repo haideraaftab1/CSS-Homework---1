@@ -1,112 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Netflix | Home</title>
-    <style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS: Homework - 2</title>
+  <style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box; 
+        }
+
         body {
-            margin: 0;
-            padding: 0;
-            width: 100vw;
-            height: 100vh;
-            background-image: url('https://ichef.bbci.co.uk/news/1024/branded_news/1766/production/_99709950_english.jpg');
-            background-size: cover;
-            background-position: center;
-            position:relative;
-            overflow: hidden;
+        font-family: Arial, sans-serif;
         }
 
-        body::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100vw;
-            height: 100vh;
-            background-color: rgba(0, 0, 0, 0.6); /* Black tint with 60% opacity */
-            /* z-index: 1; */
+        header {
+        position: relative;
+        width: 100%;
+        height: 100vh;
         }
 
-        #navbar {
+        nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100px;
+        background: linear-gradient(black, rgb(95, 95, 95));
+        padding: 15px 0;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+        }
+
+        nav a {
+        color: white;
+        text-decoration: none;
+        margin: 0 20px;
+        padding: 10px 40px;
+        font-size: 20px;
+        font-weight: bold;
+        transition: background-color 0.3s, color 0.3s;
+        }
+
+        nav a:hover {
+        background-color: white;
+        color: black;
+        border-radius: 5px;
+        }
+
+        header img.img5 {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        }
+
+        .gallery {
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             align-items: center;
-            padding: 20px 30px;
-            position: absolute;
-            top: 0;
-            width: 100%;
-            z-index: 2;
+            gap: 30px; 
+            padding-top: 50px;
+            margin-bottom: 50px; 
+        }   
+
+        .gallery img {
+        width: 30%; 
+        height: 80vh;
+        object-fit: cover;
+        border-radius: 5px; 
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5); 
         }
 
-        #navbar .logo img {
-            width: 220px;
-            padding-left: 200px;
-            height: auto;
+        footer {
+        display: flex;
+        background-color: black;
+        gap: 50px; 
+        height: 100vh;
+        overflow: hidden;
         }
 
-        .button {
-            display: flex;
-            padding-right: 200px;
-            gap: 10px;
+        p {
+            justify-content: center;
+            align-items: center;
+        color: white;
+        padding-top: 20vh;
+        padding-left: 30px;
+        font-size: 25px;
         }
 
-        .button div {
-            padding: 10px 20px;
-            background-color: red;
-            color: white;
-            text-align: center;
-            border-radius: 5px;
-            cursor: pointer;
-            font-family: Arial, sans-serif;
-            font-size: 14px;
-            font-weight: bold;
-            transition: background-color 0.3s;
+        .img3 {
+        justify-content: center;
+        align-items: center;
+        height: 70vh;
+        padding-right: 20px;
+        padding-top: 80px;
         }
 
-        .button div:hover {
-            background-color: darkred;
-        }
-
-        .content {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            z-index: 2;
-            text-align: center;
-            color: white;
-            font-family: Arial, sans-serif;
-        }
-
-        .content h1 {
-            font-size: 3rem;
-            margin-bottom: 20px;
-        }
-
-        .content p {
-            font-size: 1.5rem;
-            margin: 0;
-        }
-    </style>
+  </style>
 </head>
-
 <body>
-    <div id="navbar">
-        <div class="logo">
-            <img src="https://imgs.search.brave.com/adudiPXgQOX7Oz61HnJ-4ZsCDvulmuoEjxfo37uM58Q/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/cG5nYWxsLmNvbS93/cC1jb250ZW50L3Vw/bG9hZHMvMTMvTmV0/ZmxpeC1Mb2dvLVBO/Ry1JbWFnZXMucG5n"
-                alt="Netflix Logo">
-        </div>
-        <div class="button">
-            <div id="sign-in">Sign In</div>
-            <div id="register">Register</div>
-        </div>
-    </div>
-    <div class="content">
-        <h1>Unlimited Movies, TV Shows, and More</h1>
-        <p>Watch anywhere. Cancel anytime.</p>
-    </div>
-</body>
+  <header>
+    <img class="img5" src="./img5.jpg" alt="img5">
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#project">Project</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
 
+  <div class="gallery">
+    <img src="./img2.avif" alt="m1">
+    <img src="./img3.avif" alt="m2">
+    <img src="./img4.avif" alt="m3">
+  </div>
+
+  <footer>
+    <p>
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo placeat consectetur
+      quasi, molestiae omnis fugiat pariatur totam dolorum dolore! Vero consequatur
+      quaerat magnam possimus ut quam veritatis, quisquam hic minima consequuntur
+      doloremque, debitis dolorem mollitia totam alias eius provident illum? Nostrum
+      exercitationem quidem iure? Architecto nulla nesciunt ad nobis aliquam?Lorem
+      ipsum dolor sit amet consectetur adipisicing elit. Quidem veritatis dolorem iste
+      minima rerum similique atque laborum blanditiis, dolore ratione molestiae doloribus
+      labore, nobis sunt earum iure, dolores rem animi quas sequi error consequuntur? Sint
+      minus repellendus facere nemo nobis vitae itaque commodi et quaerat magni
+      maxime quam deserunt quod quis illo atque accusamus explicabo id suscipit, sed a,
+      error, inventore ut maiores? Necessitatibus obcaecati cum delectus quos incidunt,
+      adipisci molestias laboriosam, cumque amet itaque rem fugit dolores totam id nemo
+      non quae mollitia blanditiis cupiditate assumenda.
+    </p>
+
+    <div>
+      <img class="img3" src="./img5.avif" alt="industry">
+    </div>
+  </footer>
+</body>
 </html>
